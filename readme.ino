@@ -7,9 +7,8 @@
  * -MISO : ボード固定のSPI通信用MISOピン、ピンアサイン参照
  * -MOSI : ボード固定のSPI通信用MOSIピン、ピンアサイン参照
  * 
- * NFCcore8はNFCcore6で取り入れたKHEC-KCG共通規格(https://docs.google.com/spreadsheets/d/19-Z5d7bw4iWchVB4cAa4Gvx5h9HcvqutWEYCGTYfdFQ/edit?usp=sharing)
- * とNFCcore7bで採用したclass構造をマージしたものです。基本的にreadしたデータはclass内public領域にある配列に記録されます。またwriteをするときに書き込むデータは、write関数
- * 呼び出し前に、同じくpublic領域にある配列に記録しておく必要があります。
+ * NFCcore8はNFCcore6で取り入れたKHEC-KCG共通規格とNFCcore7bで採用したclass構造をマージしたものです。基本的にreadしたデータはclass内public領域にある配列に記録されます。
+ * またwriteをするときに書き込むデータは、write関数呼び出し前に、同じくpublic領域にある配列に記録しておく必要があります。
  * 
  * ver8の大きな変更点
  * １、Date[]オブジェクトをclass内のpublicに用意しました。入退室管理などを行う場合は、このDateオブジェクト内に最新の時刻を記録することで、自動的にカード内に最終記録時刻が保存される仕組みとなります。
